@@ -1,4 +1,4 @@
-# Custome Relationshp Management
+# Customer Relationship Management
 
 ## This is a backend app created with Node.js, Express and Mongo db to enable web API that pushes and pull data from the database via HTTP.
 

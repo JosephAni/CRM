@@ -16,3 +16,9 @@ Overall, a CRM system can help you improve the efficiency and effectiveness of y
 Setting up the project requires that you have basic knowledge of Javascript. The project will guide you on how to set up the project, the Express server and testing environment
 with endpoints to add, update and delete data from MongoDB database. Additionally it demonstrates how to serve static files and images with your API.
 [label](https://app.monkeylearn.com/studio/templates)
+
+### Download
+
+- Latest version of Node (http://nodejs.org)
+- Latest version of MongoDB (http://mongodb.org)
+- Latest version of Express.

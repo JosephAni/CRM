@@ -24,4 +24,4 @@ with endpoints to add, update and delete data from MongoDB database. Additionall
 - Latest version of Express. (https://www.expressvpn.com/)
 
 - To run the app, fork or clone the code into your repository.
-- In your favorite ide cd into the file and run npm start.
+- In your favorite IDE cd into the file and run npm start.

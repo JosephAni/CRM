@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import PlayerList from '../Components/Player/PlayerList';
 import PlayerSingle from '../Components/Player/PlayerSingle';
-import PlayerForm from '../Components/Player/PlayerForm';
+import PlayerForm from '../Components/AppPlayer/PlayerForm';
 
 function App() {
   return (

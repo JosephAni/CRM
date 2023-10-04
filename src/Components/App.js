@@ -1,24 +1,31 @@
-import React from 'react';
-import './App.css';
-import PlayerList from '../Components/Player/PlayerList';
-import PlayerSingle from '../Components/Player/PlayerSingle';
-import PlayerForm from '../Components/AppPlayer/PlayerForm';
+import express from 'express';
+import mongoose from 'mongoose';
+import bodyparser from 'body-parser';
+import cors from 'cors'
+import routes from './routes/soccerRoutes';
 
-function App() {
-  return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col s12">Menu</div>
-      </div>
-      <div className="row">
-        <div className="col s3"><PlayerList /></div>
-        <div className="col s9"><PlayerSingle /></div>
-      </div>
-      <div className="row">
-        <div className="col s12"><PlayerForm /></div>
-      </div>
-    </div>
-  );
-}
+const app = express();
+const PORT = 3000;
 
-export default App;
+// mongo connection
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/soccerDB', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+// bodyparser setup
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
+
+// cors setup
+app.use(cors());
+routes(app);
+
+app.get('/', (req, res) => 
+    res.send(`Our Soccer application is running on port ${PORT}`)
+);
+
+app.listen(PORT, () => 
+    console.log(`Your soccer server is running on port ${PORT}`)
+);
